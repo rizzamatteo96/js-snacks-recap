@@ -2,7 +2,7 @@
 //TODO La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 //TODO Usiamo i nuovi metodi degli array foreach o filter.
 
-
+//* creo un array e lo riempio con 'numeriDaCreare' numeri random
 const arrayNumeri = [];
 const numeriDaCreare = 10;
 const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -12,5 +12,20 @@ while (arrayNumeri.length < numeriDaCreare){
 }
 
 console.log(arrayNumeri);
+
+
+const minVal = 1;
+const maxVal = 5;
+
+let arrayFiltered = [];
+
+//* soluzione con forEach
+arrayNumeri.forEach((element,index) => {
+    if(index >= minVal && index <= maxVal){
+        arrayFiltered.push(element);
+    }
+});
+console.log(arrayFiltered);
+
 
 
