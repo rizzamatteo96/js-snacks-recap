@@ -12,6 +12,7 @@ while (arrayNumeri.length < numeriDaCreare){
 }
 
 console.log(arrayNumeri);
+console.log('*********');
 
 
 const minVal = 1;
@@ -25,7 +26,11 @@ arrayNumeri.forEach((element,index) => {
         arrayFiltered.push(element);
     }
 });
+console.log('Soluzione fatta con forEach');
 console.log(arrayFiltered);
 
 
-
+//* soluzione con filter
+arrayFiltered = arrayNumeri.filter((element,index) => index >= minVal && index <= maxVal);
+console.log('Soluzione fatta con filter');
+console.log(arrayFiltered);
